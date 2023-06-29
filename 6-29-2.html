@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script lang="java">
+        $(function(){
+            var checkbox_val = $("input[type ='checkbox']").val();
+            //var checkbox_val = $("#che").val(); 위와 동일한내용 이렇게 써도 됨
+            var text_val = $ ("input[id='name']").val();
+            var text_val2 = $("input[id='pass']").val();
+            var password_val = $("input[class='pw']").val();
+
+            alert(checkbox_val + "," + text_val + "," + text_val2 + "," + password_val)
+        })//jq
+    </script>
+</head>
+<body>
+    <input type="text" name="이름" id="name" value="1"><br>
+    <input type="text" data="비번" id="pass" value="2"><br>
+    <input type="checkbox" value="3" id="che"><br>
+    <input type="password" value="4" class="pw"><br>
+</body>
+</html>

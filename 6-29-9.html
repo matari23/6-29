@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".draggable").draggable({
+                cursor:"move",
+                opacity:0.7
+            })
+            $(".draggable").bind("dragstart",function(){
+                $(this).addClass("inver")
+            })
+            $(".draggable").bind("dragstop",function(){
+                $(this).removeClass("inver")
+            })
+
+        })//jq
+    </script>
+    <style type="text/css">
+        body{
+            background-color: #f1f1f1;
+        }
+        div.draggable{
+            float: left;
+            padding: 10px 0 0 20px;
+            width: 160px;
+            height: 160px;
+            background-color: thistle;
+            box-shadow:  1px 1px 5px rgba(0, 0, 0, 0.8) ;
+            margin: 0 20px;
+        }
+        div.draggable.inver{
+            background-color: violet;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="draggable">
+        <p>title</p>
+    </div><!-- draggable -->
+    <div class="draggable">
+        <p>Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis.
+        </p>
+    </div><!-- draggable -->
+    <div class="draggable">
+        <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div><!-- draggable -->
+    <div class="draggable">
+        <!-- <p>Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit.</p> -->
+        <img src="imgs/normal_01.png" alt="">
+    </div><!-- draggable -->
+</body>
+</html>

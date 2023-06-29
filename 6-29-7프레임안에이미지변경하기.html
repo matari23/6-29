@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script lang="java">
+        $(function(){
+
+            // var array = [
+            //     {name : "naver", link:" http://www.naver.com"},
+            //     {name : "daum", link:" http://www.daum.net"},
+            //     {name : "google", link:" http://www.google.com"},
+            // ];
+            // $.each(array,function(index, item){
+            //     var output = "";
+            //     output += "<a href=" + item.link + ">";
+            //     output += item.name + "</a>"
+            // })//
+            var img_path = ["imgs/bg1.jpg","imgs/bg2.jpg","imgs/bg3.jpg","imgs/bg4.jpg","imgs/bg5.jpg"]
+            var n=0;
+            setInterval(function(){
+                if(n==4){
+                    n=0;
+                }else{
+                    n++;
+                }
+                var path = img_path[n];
+                console.log("path:",path)
+                $(".img_show img").attr("src" , path)
+            },3000)
+        })//jq
+        </script>
+        <style type="text/css">
+            .img_show{
+                width: 1800px;
+                height: 1125px;
+                margin: 100px auto;
+                border: 10px groove greenyellow;
+            }
+        </style>
+</head>
+<body>
+    <div class="img_show">
+        <img src="imgs/bg1.jpg" alt="bg1">
+
+    </div>
+</body>
+</html>  

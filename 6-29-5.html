@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div{
+            display: inline-block;
+        }
+        label{
+            background-color: yellowgreen;
+            padding: 10px;
+            border: 1px solid green;
+        }
+        input{}
+        input[type="radio"]:checked + label{
+            background-color: teal;
+            color: #fff;
+            border: 5px solid #8ac6a4;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="radio" name="lang" value="MB_1" id="MB_1">
+        <label for="" class="radio">MB_1</label>
+    </div>
+    <div>
+        <input type="radio" name="lang" value="MB_2" id="MB_2">
+        <label for="" class="radio">MB_2</label>
+    </div>
+    <div>
+        <input type="radio" name="lang" value="MB_3" id="MB_3">
+        <label for="" class="radio">MB_3</label>
+    </div>
+</body>
+</html>

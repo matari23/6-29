@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script lang="java">
+        $(function(){
+            $("#allCK").click(function(){
+                var checked = $("#allCK").is(":checked");
+                console.log(checked)
+                if(checked){
+                    $("input:checkbox").prop("checked", true)
+                }else{
+                    $("input:checkbox").prop("checked", false)
+                }//("#allCK").click
+
+                $("#btn1").click(function(){
+                    var checked = $("#CK1").is(":checked");
+                    $("#CK1").prop("checked", !checked)
+                })
+                $("#btn2").click(function(){
+                    var checked = $("#CK2").is(":checked");
+                    $("#CK2").prop("checked", !checked)
+                })
+                $("#btn3").click(function(){
+                    var checked = $("#CK3").is(":checked");
+                    $("#CK3").prop("checked", !checked)
+                })
+            })
+        })//jq
+    </script>
+</head>
+<body>
+    <div>전체 <input type="checkbox" id="allCK"></div>
+    <div>테스트1 <input type="checkbox" id="CK1"></div>
+    <div>테스트2 <input type="checkbox" id="CK2"></div>
+    <div>테스트3 <input type="checkbox" id="CK3"></div>
+    <button type="button" id="btn1">1번 체크/ 언체크</button>
+    <button type="button" id="btn2">2번 체크/ 언체크</button>
+    <button type="button" id="btn3">3번 체크/ 언체크</button>
+</body>
+</html>

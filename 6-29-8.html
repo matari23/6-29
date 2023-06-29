@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script lang="java">
+        $(function(){
+
+            $(".bar").draggable({
+                axis:"x",
+                containment:".scroll_bar"
+            })
+
+            $(".bar").bind("drag",function(){
+                img_move()
+            })
+
+            function img_move(){
+                var bar_left =parseInt( $(".bar").css("left") )
+                console.log(bar_left)
+                var pos = (bar_left * -5400) / 400
+                console.log(pos)
+                $(".img_area").css({left:pos + "px"})
+            }
+
+        })//
+        </script>
+        <style type="text/css">
+
+            *{margin: 0;padding: 0;}
+            body{background-color: #f1f1f1;}
+            .box{
+                margin: 100px auto;
+                width: 520px;
+            }
+            .scroll_wrap{
+                width: 500px;
+                border: 10px solid black;
+                overflow: hidden;
+            }
+            .img_area{
+                width: 1800px;
+                height: 1125px;
+                position: relative;
+                width: calc(1800px * 4 );
+            }
+            .img_area img{
+                width: 1800px;
+                height: 1125px;
+            }
+            .scroll_bar{
+                width: 100%;
+                height: 10px;
+                background-color: white;
+            }
+            .bar{
+                width: 100px;
+                height: 10px;
+                background-color: aquamarine;
+                cursor: pointer;
+            }
+    
+        </style>
+</head>
+<body>
+    <div class="box">
+
+        <div class="scroll_wrap">
+
+            <div class="img_area">
+                <img src="imgs/bg1.jpg" alt="">
+                <img src="imgs/bg2.jpg" alt="">
+                <img src="imgs/bg3.jpg" alt="">
+                <img src="imgs/bg4.jpg" alt="">
+            </div>
+
+            <div class="scroll_bar">
+                <div class="bar"></div>
+            </div>
+
+        </div><!-- scroll_wrap -->
+
+    </div><!-- box -->
+</body>
+</html>
